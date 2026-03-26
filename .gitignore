@@ -8,6 +8,10 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+*.keras
+*.lock
+*.cfg
+Gradioexp/
 build/
 develop-eggs/
 dist/
