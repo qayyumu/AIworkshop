@@ -34,7 +34,7 @@ numpy
 pandas
 scikit-learn
 matplotlib
-
+dspy
 # Hugging Face Datasets (optional, if needed)
 datasets
 # For image processing (if needed)
