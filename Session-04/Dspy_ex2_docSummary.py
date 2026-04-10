@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 lm = dspy.LM('openai/gpt-4o-mini', api_key=os.getenv('OPENAI_API_KEY'))
 
-with open('./Session-05/Dspy_ex1.py', 'r') as file:
+with open('./Session-04/Dspy_ex1.py', 'r') as file:
     document = file.read()
 # print(document)
 ########################################################
