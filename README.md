@@ -1,91 +1,99 @@
 # AI Workshop
 
-Welcome to the **AI Practical Workshop**! 
+Welcome to the **AI Practical Workshop**.
 
-This repository contains materials and code examples for a five-day hands-on workshop focused on various AI and machine learning libraries and techniques.
+This repository contains materials and code examples for a hands-on workshop. Content is organized by session folders (`Session-01` … `Session-05`), each mapping to a day of topics.
 
-## Workshop Overview
+## Workshop overview
 
-During this workshop, participants will gain practical experience with the following libraries and topics:
+You will work with:
 
-- **Gradio**: Build interactive demos and interfaces.
-- **OpenAI**: Utilize state-of-the-art AI models for various tasks.
-- **HuggingFace**: Work with popular NLP models and tools.
-- **Python Basics**: Understand the fundamentals of Python programming.
-- **Object-Oriented Programming (OOP) in Python**: Learn the principles of OOP to structure and organize code.
-- **Natural Language Processing (NLP)**: Perform tasks such as sentiment analysis and summarization.
-- **PyTorch**: Implement neural networks for classification tasks.
+- **Python**: Syntax, data types, control flow, and structuring code with OOP.
+- **Data stack**: NumPy, Pandas, and Matplotlib for analysis and plotting.
+- **Classical ML**: scikit-learn for regression, classification, and related workflows.
+- **Gradio**: Interactive demos and UIs for models.
+- **Hugging Face**: Transformers, pipelines, and vision examples.
+- **TensorFlow / Keras**: Neural networks (e.g. image classification).
+- **OpenAI & DSPy**: API usage and small programmatic LLM workflows.
+- **Multi-agent systems**: CrewAI-style agents, tasks, and tools (local or cloud LLMs).
 
-## Workshop Schedule
+## Repository layout
 
-### Day 1: Python Basics and OOP
+| Folder | Focus |
+|--------|--------|
+| `Session-01` | Python basics and OOP / external packages |
+| `Session-02` | Classical machine learning (scikit-learn) |
+| `Session-03` | Gradio, Hugging Face, TensorFlow, computer vision |
+| `Session-04` | OpenAI API and DSPy examples |
+| `Session-05` | Multi-agent patterns with CrewAI |
+| `session_computervision` | Extra computer-vision script (`depth_Estimation.py`) |
 
-- **Python Basics**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/session_01/Python_basics.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-  - Introduction to Python programming.
-  - Basic syntax and data structures.
+Colab links below use the GitHub path `qayyumu/GradioExp` on the `main` branch. If you fork or rename the repo, update the URL segment after `/github/`.
 
-- **OOP and External Packages**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/session_01/Python_OOP_and_external_packages.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-  - Object-Oriented Programming in Python.
-  - Understanding classes and objects.
-  - Inheritance, encapsulation, and polymorphism.
+## Workshop schedule
 
-  - **Numpy, Pandas, Matplotlib**:
-    - Introduction to Numpy, Pandas, Matplotlib for numerical computations.
+### Day 1 — `Session-01`: Python basics and OOP
 
-### Day 2: Introduction to Gradio and OpenAI
+- **Python basics**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-01/Python_basics.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  
+  Introduction to Python: types, structures, and core syntax.
 
-- **Gradio**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/session_02/Intro_to_Gradio.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-  - Building interactive demos and interfaces.
+- **OOP and external packages**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-01/Python_OOP_and_external_packages.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  
+  Classes, objects, and practical use of NumPy, Pandas, and Matplotlib.
 
-- **OpenAI**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/session_02/OpenAI_API.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-  - Utilizing OpenAI models for various AI tasks esp text generation.
+### Day 2 — `Session-02`: Classical ML
 
-### Day 3: Hugging Face for NLP
+- **Classical ML with scikit-learn**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-02/classical.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  
+  Linear regression, logistic regression, train/test splits, and related examples (datasets under `Session-02/res/`).
 
-- **NLP with HuggingFace**: 
-  - **Sentiment Analysis**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/session_03/HuggingFace.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> 
-    - Analyze text to determine sentiment.
-  - **Summarization, Text Classification (NER)**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/session_03/Train_Custom_mdels.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-    - Summarize long texts into concise summaries and Name Entity Recognition (NER) .
+### Day 3 — `Session-03`: Gradio, Hugging Face, TensorFlow, vision
 
-### Day 4: Gradio and Hugging Face Applications
+- **Gradio and Hugging Face**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-03/Gradio_and_Huggingface.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  
+  Building demos with Gradio and Hugging Face pipelines.
 
-- **Voice Transcription**:  <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/session_04/Gradio_and_Huggingface.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-  - Transcribe spoken language into text using AI models using huggingface and Gradio.
+- **Gradio MCP example**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-03/Gradio_MCP.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  
+  Connecting Gradio with MCP-style tooling patterns.
 
+- **Hugging Face computer vision**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-03/HuggingFace_Computervision.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  
+  Vision models and tasks with Transformers (large notebook).
 
-- **Image Classification**:
-  - Build and train image classification models.
-  - Use pre-trained models for classifying images.
+- **TensorFlow / Keras**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-03/Tensorflow.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  
+  Deep learning with Keras (TensorFlow backend).
 
-- **Image to Text**:
-  - Convert images to textual descriptions using AI models.
+### Day 4 — `Session-04`: OpenAI and DSPy
 
-- **Run Sentiment Analyss on scraped data**:  <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/session_04/Huggingface_Selenium_Sentiment.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+- **OpenAI API**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-04/OpenAI_API.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  
+  Using the OpenAI API for text and related tasks.
 
-### Day 5: Introduction to PyTorch
+- **DSPy (Python scripts)** — run locally or open in Colab from GitHub:  
+  - <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-04/Dspy_ex1.py" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> `Dspy_ex1.py`  
+  - <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-04/Dspy_ex2_docSummary.py" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> `Dspy_ex2_docSummary.py`
 
-- **PyTorch**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/session_05/Pytorch.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-  - Introduction to PyTorch for deep learning.
-  - Building and training neural networks.
-  - Developing custom neural network models for classification.
+### Day 5 — `Session-05`: Multi-agent systems
 
-## Getting Started
+- **Multi-agent with CrewAI**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-05/Multi-agent.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  
+  Agents, tasks, crews, and optional web tools; configure API keys or local models via environment variables (see notebook and `.env`).
+
+### Supplementary — computer vision script
+
+- **Depth estimation**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/session_computervision/depth_Estimation.py" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> `session_computervision/depth_Estimation.py`
+
+## Getting started
 
 ### Prerequisites
 
-To get the most out of this workshop, you should have:
+- Comfortable with basic programming concepts.
+- Familiarity with machine learning ideas is helpful for later sessions.
 
-- Basic knowledge of Python programming.
-- An understanding of machine learning concepts.
+### Local setup
 
-### Installation
-
-Clone the repository and install the required dependencies:
+Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/qayyumu/GradioExp.git
 cd GradioExp
 pip install -r requirements.txt
+```
 
-''' or you can use Google colab to run the scripts
+You can also run most notebooks in [Google Colab](https://colab.research.google.com/) using the links above (upload or mount files such as `Session-02/res/` when a notebook expects them).
+
+For API-based sessions, create a `.env` file (not committed; see `.gitignore`) and set keys as required by each notebook—for example `OPENAI_API_KEY`, optional GLM keys, or local Ollama endpoints.
