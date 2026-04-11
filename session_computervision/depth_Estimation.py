@@ -1,12 +1,12 @@
 import gradio as gr
-from transformers import DPTFeatureExtractor, DPTForDepthEstimation
+from transformers import DPTImageProcessor, DPTForDepthEstimation
 import torch
 import numpy as np
 from PIL import Image
 
-torch.hub.download_url_to_file('http://images.cocodataset.org/val2017/000000039769.jpg', 'cats.jpg')
+# torch.hub.download_url_to_file('http://images.cocodataset.org/val2017/000000039769.jpg', 'cats.jpg')
 
-feature_extractor = DPTFeatureExtractor.from_pretrained("Intel/dpt-large")
+feature_extractor = DPTImageProcessor.from_pretrained("Intel/dpt-large")
 model = DPTForDepthEstimation.from_pretrained("Intel/dpt-large")
 
 def process_image(image):
@@ -34,7 +34,7 @@ def process_image(image):
     
 title = "Demo: zero-shot depth estimation with DPT"
 description = "Demo for Intel's DPT, a Dense Prediction Transformer for state-of-the-art dense prediction tasks such as semantic segmentation and depth estimation."
-examples =[['cats.jpg']]
+examples =['./Session-04/cats.jpg']
 
 iface = gr.Interface(fn=process_image, 
                      inputs=gr.Image(type="pil"), 
