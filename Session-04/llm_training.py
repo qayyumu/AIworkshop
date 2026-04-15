@@ -93,7 +93,7 @@ class Value:
 @dataclass
 class TrainConfig:
     input_path: str = "input.trainfile"
-    input_url: str = "https://github.com/qayyumu/AIworkshop/blob/main/Session-04/input.trainfile"
+    input_url: str = "https://github.com/qayyumu/AIworkshop/blob/main/input.trainfile"
     checkpoint_path: str = "Session-04/llm_checkpoint.pkl"
     num_steps: int = 1000
     learning_rate: float = 0.01
@@ -301,7 +301,7 @@ def train(cfg: TrainConfig) -> None:
 def parse_args() -> TrainConfig:
     parser = argparse.ArgumentParser(description="Train a tiny character-level GPT.")
     parser.add_argument("--input", default="input.trainfile", help="Training text file (one sample per line).")
-    parser.add_argument("--input-url", default="https://github.com/qayyumu/AIworkshop/blob/main/Session-04/input.trainfile", help="Used when --input does not exist.")
+    parser.add_argument("--input-url", default="https://github.com/qayyumu/AIworkshop/blob/main/input.trainfile", help="Used when --input does not exist.")
     parser.add_argument("--checkpoint", default="Session-04/llm_checkpoint.pkl", help="Where to save trained weights.")
     parser.add_argument("--steps", type=int, default=1000, help="Number of optimization steps.")
     parser.add_argument("--lr", type=float, default=0.01, help="Initial learning rate.")
