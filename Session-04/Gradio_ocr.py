@@ -38,7 +38,7 @@ def run_ocr(image: Image.Image | None) -> str:
                         {
                             "type": "input_text",
                             "text": (
-                                "Perform OCR on this image. Return only the extracted text, "
+                                "Perform OCR on this image and you are a number plate extractor. so only extract number plate from images. The images provided are from pakistan cities. Return only the extracted text, "
                                 "preserving line breaks when possible. Do not add explanations."
                             ),
                         },
