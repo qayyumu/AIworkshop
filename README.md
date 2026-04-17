@@ -9,9 +9,9 @@ This repository holds lecture-aligned practical materials for a **5-day** worksh
 | Course day (see PDF) | Themes from *Course Contents.pdf* | Materials in this repo |
 |----------------------|-----------------------------------|-------------------------|
 | **Day 1** — AI & deep learning foundations | Python for AI, supervised learning basics, pipelines, train/test, evaluation | `Session-01` — Python refresher, OOP, NumPy / Pandas / Matplotlib |
-| **Day 2** — Classical ML & optimization | Regression, classification, SVM, trees, ensembles, scikit-learn labs | `Session-02` — `classical.ipynb` and `Session-02/res/` datasets |
-| **Day 3** — Neural networks & computer vision | MLP / CNN / ViT concepts, Keras, digit-style classification | `Session-03` — `Tensorflow.ipynb` |
-| **Day 4** — Generative foundations & LLMs | LLMs, prompting, OpenAI, Hugging Face transformers, local / generative workflows | `Session-04` — OpenAI notebook, DSPy scripts, Gradio + Hugging Face, vision transformers notebook, Gradio MCP |
+| **Day 2** — Classical ML & optimization | Regression, classification, SVM, trees, ensembles, scikit-learn labs | `Session-02` — `classical.ipynb`, `linear_classification.py`, and `Session-02/res/` datasets |
+| **Day 3** — Neural networks & computer vision | MLP / CNN / ViT concepts, Keras, digit-style classification | `Session-03` — `Tensorflow.ipynb`, `Gradio_ex1.py`, `Gradio_ex2_chatbot.py` |
+| **Day 4** — Generative foundations & LLMs | LLMs, prompting, OpenAI, Hugging Face transformers, local / generative workflows | `Session-04` — OpenAI notebook, DSPy scripts, Gradio + Hugging Face, vision transformers notebook, Gradio MCP, OCR and LLM training/inference scripts |
 | **Day 5** — Agentic AI | Agents, planning, memory, tools; CrewAI project | `Session-05` — `Multi-agent.ipynb` |
 | **Supplementary** | Extra CV experiment | `session_computervision/depth_Estimation.py` |
 
@@ -32,9 +32,9 @@ This repository holds lecture-aligned practical materials for a **5-day** worksh
 | Folder | Contents |
 |--------|----------|
 | `Session-01` | `Python_basics.ipynb`, `Python_OOP_and_external_packages.ipynb` |
-| `Session-02` | `classical.ipynb`, sample data in `res/` |
-| `Session-03` | `Tensorflow.ipynb` (Keras / TensorFlow lab) |
-| `Session-04` | `OpenAI_API.ipynb`, `Gradio_and_Huggingface.ipynb`, `Gradio_MCP.ipynb`, `HuggingFace_Computervision.ipynb`, `Dspy_ex1.py`, `Dspy_ex2_docSummary.py` |
+| `Session-02` | `classical.ipynb`, `linear_classification.py`, sample data in `res/` |
+| `Session-03` | `Tensorflow.ipynb`, `Gradio_ex1.py`, `Gradio_ex2_chatbot.py` (Keras / TensorFlow and Gradio labs) |
+| `Session-04` | `OpenAI_API.ipynb`, `Gradio_and_Huggingface.ipynb`, `Gradio_MCP.ipynb`, `HuggingFace_Computervision.ipynb`, `Dspy_ex1.py`, `Dspy_ex2_docSummary.py`, `Gradio_ocr.py`, `llm_training.py`, `llm_inference.py` |
 | `Session-05` | `Multi-agent.ipynb` |
 | `session_computervision` | `depth_Estimation.py` |
 | *(root)* | `Course Contents.pdf`, `requirements.txt`, `README.md` |
@@ -52,10 +52,13 @@ Colab URLs below assume the GitHub repo **`qayyumu/GradioExp`** on branch **`mai
 
 - **Classical ML (scikit-learn)**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-02/classical.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  
   Uses CSV files in `Session-02/res/` — upload or mount that folder in Colab if paths are relative to the notebook.
+- **Linear classification script**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-02/linear_classification.py" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> `linear_classification.py`
 
 ### Day 3 — `Session-03`
 
 - **TensorFlow / Keras**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-03/Tensorflow.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+- **Gradio example 1**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-03/Gradio_ex1.py" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> `Gradio_ex1.py`
+- **Gradio example 2 (chatbot)**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-03/Gradio_ex2_chatbot.py" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> `Gradio_ex2_chatbot.py`
 
 ### Day 4 — `Session-04`
 
@@ -66,6 +69,10 @@ Colab URLs below assume the GitHub repo **`qayyumu/GradioExp`** on branch **`mai
 - **DSPy** (Python scripts; open from GitHub in Colab or run locally):  
   - <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-04/Dspy_ex1.py" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> `Dspy_ex1.py`  
   - <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-04/Dspy_ex2_docSummary.py" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> `Dspy_ex2_docSummary.py`
+- **Gradio OCR app**: <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-04/Gradio_ocr.py" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> `Gradio_ocr.py`
+- **LLM scripts** (local training/inference demos):  
+  - <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-04/llm_training.py" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> `llm_training.py`  
+  - <a href="https://colab.research.google.com/github/qayyumu/GradioExp/blob/main/Session-04/llm_inference.py" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> `llm_inference.py`
 
 ### Day 5 — `Session-05`
 
