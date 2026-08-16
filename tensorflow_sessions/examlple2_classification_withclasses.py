@@ -21,30 +21,38 @@ if (show_images):
         plt.xlabel(class_names[train_labels[i]])
     plt.show()
     
+class myModel(models.Model):
+    def __init__(self):
+        super().__init__()
+        self.flatten = layers.Flatten(input_shape=(28,28))
+        self.dense1 = layers.Dense(256, activation='relu')
+        self.dense2 = layers.Dense(10)
+    
+    def call(self,x):
+        x = self.flatten(x)
+        x = self.dense1(x)
+        x = self.dense2(x)
+        return x
 
-### define the model
-model = models.Sequential()
-model.add(layers.Flatten(input_shape=(28,28)))
-model.add(layers.Dense(256, activation='relu'))
-model.add(layers.Dense(10))
-model.compile(optimizer='adam',
+myModel = myModel()
+myModel.compile(optimizer='adam',
               loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
               metrics=['accuracy'])
 ## train and evaluate the model
-model.fit(train_images, train_labels, epochs=10)
-test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=2)
+myModel.fit(train_images, train_labels, epochs=10)
+test_loss, test_acc = myModel.evaluate(test_images, test_labels, verbose=2)
 
 print(f"Test dataset accuracy: {test_acc} and loss: {test_loss}")
 
 
 #### make predictions
-predictions_array = model.predict(test_images)
+predictions_array = myModel.predict(test_images)
 top_predictions = np.argmax(predictions_array, axis=1)
 print("Predicted Classes: ",[class_names[i] for i in top_predictions[:10].tolist()])
 print("True Classes: ",[class_names[i] for i in test_labels[:10].tolist()])
 
 ### show the probabilties of these predictions
-model_predictions = tf.keras.Sequential([model,tf.keras.layers.Softmax()])
+model_predictions = tf.keras.Sequential([myModel,tf.keras.layers.Softmax()])
 predictions_probabilities = model_predictions.predict(test_images)
 predictions_probabilities = np.max(predictions_probabilities, axis=1)
 print("Prbababilities for these predictions: ",predictions_probabilities[:10])
