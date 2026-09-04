@@ -12,6 +12,18 @@ client = OpenAI(
     api_key=os.environ["HF_TOKEN"],
 )
 
+#### Text Input #####
+response = client.chat.completions.create(
+    model="Qwen/Qwen3.8-27B:deepinfra",
+    messages=[
+        {"role": "user", "content": "What is Hugging Face? Answer in one sentence."},
+    ],
+    max_tokens=128,
+)
+
+print(response.choices[0].message.content)
+
+#### Image Input #####
 completion = client.chat.completions.create(
     model="Qwen/Qwen3.8-27B:deepinfra",
     messages=[
@@ -34,3 +46,6 @@ completion = client.chat.completions.create(
 )
 
 print(completion.choices[0].message.content)
+
+
+
